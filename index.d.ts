@@ -155,7 +155,7 @@ declare namespace HAPNodeJS {
         CarbonMonoxideDetected: Characteristic;
         CarbonMonoxideLevel: Characteristic;
         CarbonMonoxidePeakLevel: Characteristic;
-        ChargingState: Characteristic;
+        ChargingState: ChargingCharacteristic;
         ContactSensorState: Characteristic;
         CoolingThresholdTemperature: Characteristic;
         CurrentAirPurifierState: Characteristic;
@@ -258,6 +258,12 @@ declare namespace HAPNodeJS {
         VOCDensity: Characteristic;
         Volume: Characteristic;
         WaterLevel: Characteristic;
+    }
+
+    export interface ChargingCharacteristic extends Characteristic {
+        NOT_CHARGEABLE: number;
+        NOT_CHARGING: number;
+        CHARGING: number;
     }
 
 
