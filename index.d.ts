@@ -302,7 +302,7 @@ declare namespace HAPNodeJS {
     }
 
     export interface Accessory extends IEventEmitterAccessory {
-        new (displayName: string, UUID: string): Accessory;
+        new (displayName: string, UUID?: string): Accessory;
         displayName: string;
         username: string;
         pincode: string;
